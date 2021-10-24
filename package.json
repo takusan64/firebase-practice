@@ -9,10 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.1.1",
+    "@emotion/styled": "^10.0.27",
     "d3-geo": "^3.0.1",
+    "emotion-theming": "^10.0.27",
+    "firebase": "^8.10.0",
     "next": "11.1.2",
+    "nookies": "^2.5.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-firebase-hooks": "^3.0.4",
+    "react-firebaseui": "^5.0.2",
     "topojson-client": "^3.1.0"
   },
   "devDependencies": {
