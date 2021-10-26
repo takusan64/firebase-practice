@@ -1,19 +1,23 @@
+import { useContext } from "react"
 import type { NextPage } from 'next'
-import JapanMap from '../components/JapanMap'
-import firebase from "../firebase/clientApp"
+import Home from "../components/templates/Home"
+import { AuthContext } from "../store/auth"
+import { LoginListener } from "../utils/auth"
 
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
+  const { currentUser } = useContext(AuthContext)
+  LoginListener()
 
-  const logout = () => {
-    firebase.auth().signOut();
-  }
   return (
     <>
-      <button onClick={logout}>Log out</button>
-      <JapanMap />
+      {currentUser &&
+        <>
+          <Home />
+        </>
+      }
     </>
   )
 }
 
-export default Home
+export default HomePage

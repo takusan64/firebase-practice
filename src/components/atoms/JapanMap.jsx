@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { geoMercator, geoPath } from 'd3-geo'
 import { feature } from 'topojson-client'
-import japan_geo from '../data/japan_geo'
+import japan_geo from '../../data/japan_geo'
 
 const JapanMap = () => {
 

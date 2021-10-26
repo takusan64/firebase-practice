@@ -1,13 +1,12 @@
 import type { NextPage } from 'next'
-import LoginForm from "../components/LoginForm"
+import Login from "../components/templates/Login"
 
-const Login: NextPage = () => {
+const LoginPage: NextPage = () => {
   return (
     <>
-      <h1>Plz Login</h1>
-      <LoginForm />
+      <Login />
     </>
   )
 }
 
-export default Login
+export default LoginPage
