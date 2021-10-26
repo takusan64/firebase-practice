@@ -7,9 +7,6 @@ const JapanMap = () => {
 
   const [prefectures, setPrefectures] = useState([])
 
-  const width = 1300
-  const height = 960
-
   const projection = () => {
     return geoMercator()
       .scale(1000)
@@ -28,7 +25,7 @@ const JapanMap = () => {
 
   return (
     <>
-      <svg width={width} height={height}>
+      <svg viewBox="0 0 550 550">
         {prefectures.map((d, i) => {
           return (
             <path
