@@ -11,12 +11,17 @@ import {
 } from '@chakra-ui/react'
 import {
   MoonIcon,
-  SunIcon
+  SunIcon,
+  ExternalLinkIcon
 } from '@chakra-ui/icons'
-
+import firebase from "../../firebase/clientApp"
 
 const Header: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
+
+  const logout = () => {
+    firebase.auth().signOut()
+  }
 
   return (
     <Box borderWidth="1px">
@@ -35,8 +40,8 @@ const Header: React.FC = () => {
           />
         </Box>
         <Box p="3"  mr="4">
-          <Button colorScheme="teal">
-            Login
+          <Button colorScheme="teal" onClick={logout} leftIcon={<ExternalLinkIcon />}>
+            Logout
           </Button>
         </Box>
       </Flex>
