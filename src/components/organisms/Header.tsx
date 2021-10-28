@@ -1,11 +1,10 @@
 import React from "react"
 import {
-  IconButton,
   useColorMode,
+  useBreakpointValue,
   Box,
   Heading,
   Flex,
-  Button,
   Spacer,
   Center
 } from '@chakra-ui/react'
@@ -15,9 +14,15 @@ import {
   ExternalLinkIcon
 } from '@chakra-ui/icons'
 import firebase from "../../firebase/clientApp"
+import {
+  ButtonBase,
+  IconButtonBase
+} from "components/atoms"
+
 
 const Header: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
+  const headerSize = useBreakpointValue({ base: "xs", sm: "sm",  md: "lg" })
 
   const logout = () => {
     firebase.auth().signOut()
@@ -25,24 +30,26 @@ const Header: React.FC = () => {
 
   return (
     <Box borderWidth="1px">
-      <Flex>
-        <Center p="3" ml="4">
-          <Heading as="h1" size="lg">
+      <Flex p="3">
+        <Center ml="3">
+          <Heading size={headerSize}>
             Trabel Memory🌍
           </Heading>
         </Center>
         <Spacer />
-        <Box p="3">
-          <IconButton
-            aria-label="DarkMode Switch"
+        <Box mr="2">
+          <IconButtonBase
+            label="DarkMode Switch"
             icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             onClick={toggleColorMode}
           />
         </Box>
-        <Box p="3"  mr="4">
-          <Button colorScheme="teal" onClick={logout} leftIcon={<ExternalLinkIcon />}>
-            Logout
-          </Button>
+        <Box mr="3">
+          <ButtonBase
+            name="Logout"
+            onClick={logout}
+            icon={<ExternalLinkIcon />}
+          />
         </Box>
       </Flex>
     </Box>
