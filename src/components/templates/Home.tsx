@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import JapanMap from "../atoms/JapanMap"
+import { JapanMap } from "components/atoms"
 
 const Home: NextPage = () => {
 
