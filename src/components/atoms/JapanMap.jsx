@@ -28,22 +28,24 @@ export const JapanMap = () => {
 
   return (
     <>
-      <svg viewBox="0 0 550 550">
-        {prefectures.map((d, i) => {
-          return (
-            <path
-              key={`path-${i}`}
-              d={geoPath().projection(projection())(d)}
-              strokeWidth={0.5}
-              onClick={() => fnc(d.properties.name)}
-              className={i % 2 ? 
-                styles[`visitPref${colorMode}`] :
-                styles[`nonVisitPref${colorMode}`]
-              }
-            />
-          )
-        })}
-      </svg>
+      <div className={styles.container}>
+        <svg viewBox="0 0 500 500" preserveAspectRatio="none" >
+          {prefectures.map((d, i) => {
+            return (
+              <path
+                key={`path-${i}`}
+                d={geoPath().projection(projection())(d)}
+                strokeWidth={0.5}
+                onClick={() => fnc(d.properties.name)}
+                className={i % 2 ?
+                  styles[`visitPref${colorMode}`] :
+                  styles[`nonVisitPref${colorMode}`]
+                }
+              />
+            )
+          })}
+        </svg>
+      </div>
     </>
   )
 }

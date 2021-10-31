@@ -1,15 +1,30 @@
-.visitPrefLight{
+.container {
+  max-width: 900px;
+  margin: auto;
+  svg {
+    width: 100%;
+    height: auto;
+    path{
+      opacity: 0.8;
+    }
+    path:hover{
+      opacity: 1;
+    }
+  }
+}
+
+.visitPrefLight {
   fill: #32a803;
 }
 
-.nonVisitPrefLight{
+.nonVisitPrefLight {
   fill: #718096;
 }
 
-.visitPrefDark{
-  fill: #5AFF19;
+.visitPrefDark {
+  fill: #5aff19;
 }
 
-.nonVisitPrefDark{
+.nonVisitPrefDark {
   fill: #718096;
 }
