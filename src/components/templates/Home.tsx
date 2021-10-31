@@ -1,13 +1,10 @@
 import type { NextPage } from 'next'
-import { JapanMap } from "components/atoms"
 
-const Home: NextPage = () => {
+export const Home: NextPage = () => {
 
   return (
     <>
-      <JapanMap />
+      <h1>This is Home</h1>
     </>
   )
 }
-
-export default Home

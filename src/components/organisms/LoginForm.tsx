@@ -1,10 +1,10 @@
 import React from "react"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
-import firebase from "../../firebase/clientApp"
+import firebase from "firebase/clientApp"
 
 const uiConfig = {
   signInFlow: 'popup',
-  signInSuccessUrl: "/",
+  signInSuccessUrl: "/map",
   signInOptions: [
     {
       provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,

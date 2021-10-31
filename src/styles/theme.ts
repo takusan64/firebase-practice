@@ -10,8 +10,14 @@ const breakpoints = createBreakpoints({
   '2xl': '96em'
 });
 
+const colors = {
+    black: "#1A202C",
+    white: "#f0f0f0"
+}
+
 export const theme = extendTheme({
   breakpoints,
+  colors,
   // https://chakra-ui.com/docs/theming/theme#typography
   fonts: {
     body: 'system-ui, sans-serif',

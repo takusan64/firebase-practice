@@ -1,12 +1,10 @@
 import React from "react"
 import LoginForm from "../organisms/LoginForm"
 
-const Login: React.FC = () => {
+export const Login: React.FC = () => {
   return (
     <>
       <LoginForm />
     </>
   )
 }
-
-export default Login

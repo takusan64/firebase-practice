@@ -13,7 +13,7 @@ import {
   SunIcon,
   ExternalLinkIcon
 } from '@chakra-ui/icons'
-import firebase from "../../firebase/clientApp"
+import firebase from "firebase/clientApp"
 import {
   ButtonBase,
   IconButtonBase
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
   }
 
   return (
-    <Box borderWidth="1px">
+    <Box borderWidth="0 0 2px 0">
       <Flex p="3">
         <Center ml="3">
           <Heading size={headerSize}>
