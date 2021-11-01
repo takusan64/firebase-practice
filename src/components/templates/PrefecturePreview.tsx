@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
+import React from "react"
 
-export const PrefecturePreview: NextPage = () => {
+export const PrefecturePreview: React.FC = () => {
 
   return (
     <>

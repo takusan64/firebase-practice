@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
+import React from "react"
 import { JapanMap } from "components/atoms"
 
-export const Map: NextPage = () => {
+export const Map: React.FC = () => {
 
   return (
     <>

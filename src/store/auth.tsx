@@ -1,4 +1,4 @@
-import firebase from '../firebase/clientApp'
+import firebase from 'firebase/clientApp'
 import { FC, createContext, useEffect, useState } from 'react'
 
 type User = firebase.User

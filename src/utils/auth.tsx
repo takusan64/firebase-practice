@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react'
-import { AuthContext } from "../store/auth"
+import { AuthContext } from "store/auth"
 import { useRouter } from 'next/router'
 
 export const LoginListener = () => {

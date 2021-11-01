@@ -7,7 +7,7 @@ import {
 
 type IconButtonBaseProps = {
   label: string
-  onClick:() => void
+  onClick?:() => void
   icon: React.ReactElement
 }
 
@@ -18,8 +18,9 @@ export const IconButtonBase: React.FC<IconButtonBaseProps> = (props) => {
     <IconButton
       aria-label={props.label}
       icon={props.icon}
-      onClick={props.onClick}
+      onClick={props.onClick||undefined}
       size={buttonSize}
+      bg="transparent"
     />
   )
 }
