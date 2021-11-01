@@ -44,11 +44,12 @@ const CustomLinkIcon: React.FC<CustomTooltipProps> = (props) => {
 
 const Footer: React.FC = () => {
   const footerSize = useBreakpointValue({ base: "xs", sm: "sm" })
+  const iconSpacing = useBreakpointValue({ base: "4", sm: "2" })
 
   return (
     <>
       <Container pt="6" centerContent>
-        <HStack spacing="6px">
+        <HStack spacing={iconSpacing}>
           <CustomLinkIcon
             label="Github"
             url="https://github.com/takusan64"
