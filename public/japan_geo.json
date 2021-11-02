@@ -1,4 +1,4 @@
-const japan_geo = {
+{
   "type": "Topology",
   "objects": {
     "japan": {
@@ -246220,5 +246220,3 @@ const japan_geo = {
     ]
   }
 }
-
-export default japan_geo

@@ -1,11 +1,15 @@
 import React from "react"
 import { JapanMap } from "components/atoms"
 
-export const Map: React.FC = () => {
+type MapProps = {
+  jp_geo: any
+}
+
+export const Map: React.FC<MapProps> = ({ jp_geo }) => {
 
   return (
     <>
-      <JapanMap />
+      <JapanMap jp_geo={jp_geo}/>
     </>
   )
 }

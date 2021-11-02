@@ -1,11 +1,10 @@
-import React, { Children } from "react"
+import React from "react"
 import {
   useBreakpointValue,
   Box,
   Text,
   HStack,
   Container,
-  Tooltip,
   Link
 } from '@chakra-ui/react'
 import { Icon } from "@chakra-ui/react"
@@ -15,29 +14,27 @@ import {
 } from "react-icons/fa"
 import { SiQiita } from "react-icons/si"
 import {
-  IconButtonBase
+  IconButtonBase,
+  TooltipBase
 } from "components/atoms"
 
-type CustomTooltipProps = {
+type CustomLinkIconProps = {
   label: string
-  size?: string
   url: string
   icon: React.ReactElement
 }
 
-const CustomLinkIcon: React.FC<CustomTooltipProps> = (props) => {
+const CustomLinkIcon: React.FC<CustomLinkIconProps> = (props) => {
   return (
     <>
-      <Tooltip label={props.label} size={props.size || "md"}>
-        <Box>
-          <Link href={props.url} isExternal>
-            <IconButtonBase
-              label={props.label}
-              icon={props.icon}
-            />
-          </Link>
-        </Box>
-      </Tooltip>
+      <TooltipBase label={props.label} size="md">
+        <Link href={props.url} isExternal>
+          <IconButtonBase
+            label={props.label}
+            icon={props.icon}
+          />
+        </Link>
+      </TooltipBase>
     </>
   )
 }
