@@ -34,4 +34,4 @@ yarn-error.log*
 .vercel
 
 # firebase secrets
-secrets.json
+/public/serviceAccountKey.json
